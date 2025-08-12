@@ -33,7 +33,10 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               child: TextButton(
                 onPressed: () {
-                  diceChange();
+                  setState(() {
+                    leftDiceNumber = Random().nextInt(6) + 1;
+                    rightDiceNumber = Random().nextInt(6) + 1;
+                  });
                 },
                 child: Image(
                     image: AssetImage('images/dice$leftDiceNumber.png')),
@@ -41,7 +44,12 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Expanded(
               child: TextButton(
-                onPressed: diceChange,
+                onPressed: () {
+                  setState(() {
+                    rightDiceNumber = Random().nextInt(6) + 1;
+                    leftDiceNumber = Random().nextInt(6) + 1;
+                  });
+                },
                 child: Image(
                     image: AssetImage('images/dice$rightDiceNumber.png')),
               ),
