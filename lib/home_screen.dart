@@ -34,14 +34,14 @@ class _HomeScreenState extends State<HomeScreen> {
               child: TextButton(
                 onPressed: diceChange,
                 child: Image(
-                    image: AssetImage('images/dice$leftDiceNumber.png')),
+                    image: AssetImage('images/dice$rightDiceNumber.png')),
               ),
             ),
             Expanded(
               child: TextButton(
                 onPressed:diceChange,
                 child: Image(
-                    image: AssetImage('images/dice$rightDiceNumber.png')),
+                    image: AssetImage('images/dice$leftDiceNumber.png')),
               ),
             ),
           ],
